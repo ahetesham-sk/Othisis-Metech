@@ -1,0 +1,70 @@
+<div class="grid-container">
+  <div class="col-md-2">
+    <h1 class="heading">Template</h1>
+    <mat-card appearance="outlined">
+      <mat-card-content>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Search Template</mat-label>
+            <input type="tel" matInput placeholder="Search Template">
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+        </form>
+        <!-- Template List -->
+        <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]"
+          class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (item of todo; track item) {
+          <div class="example-box" cdkDrag>{{item.title}}</div>
+          }
+        </div>
+      </mat-card-content>
+      <mat-card-footer>
+        <div class="toolbar-buttons">
+          <button mat-flat-button class="full-width-button">Edit <mat-icon>mode_edit</mat-icon></button>
+        </div>
+      </mat-card-footer>
+    </mat-card>
+
+  </div>
+
+  <div class="col-md-10">
+    <mat-toolbar class="toolbar">
+      <h1 class="heading">Root Canal <mat-icon>info_outline</mat-icon></h1>
+      <span class="spacer"></span>
+      <div class="toolbar-buttons">
+        <button mat-stroked-button class="bg-white"><mat-icon>mic</mat-icon> Resume</button>
+      </div>
+      <mat-icon>file_upload</mat-icon>
+      <mat-icon class="text-danger">delete</mat-icon>
+    </mat-toolbar>
+
+    <mat-card appearance="outlined">
+      <mat-card-content>
+        <!-- Root Canal List -->
+        <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]"
+          class="example-list2" (cdkDropListDropped)="drop($event)">
+          @for (item of done; track item) {
+          <div class="example-box" cdkDrag>
+            <span class="title">{{item.title}}</span>
+            <span class="desc">{{item.desc}}</span>
+          </div>
+          }
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="col-md-12">
+    <mat-toolbar class="toolbar">
+      <span class="spacer"></span>
+      <div class="toolbar-buttons">
+        <button mat-stroked-button class="bg-white">Send Referal</button>
+      </div>
+      <div class="toolbar-buttons">
+        <button mat-flat-button class="bg-dark">Save Note</button>
+      </div>
+    </mat-toolbar>
+  </div>
+</div>

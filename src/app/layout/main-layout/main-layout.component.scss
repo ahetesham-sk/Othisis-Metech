@@ -1,0 +1,19 @@
+.main-container {
+  height: 100vh;
+}
+
+.sidebar {
+  width: 80px !important;
+  background-color: black;
+  border-radius: 0%;
+  margin: auto;
+}
+
+.main-content {
+  padding: 16px;
+  min-height: calc(100vh - 128px); // header + footer
+}
+
+.footer {
+  justify-content: center;
+}

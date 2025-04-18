@@ -1,0 +1,151 @@
+.grid-container {
+  display: flex;
+}
+
+.col-md-2 {
+  flex-basis: 20%;
+  /* 2/12 of the container */
+  background-color: #ddd;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  min-height: 500px;
+  text-align: center;
+}
+
+.col-md-10 {
+  flex-basis: 80%;
+  /* 10/12 of the container */
+  background-color: #ddd;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  min-height: 500px;
+}
+.col-md-12{
+  flex-basis: 100%;
+  border-radius: 10px;
+}
+.heading {
+  font-weight: 500 !important;
+  font-size: 28px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+// Drag and Drop Styles
+.example-container {
+  width: 400px;
+  max-width: 100%;
+  margin: 0 25px 25px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.example-list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+}
+.example-list2{
+  border: dashed 3px #ccc;
+  min-height: 450px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+}
+
+.example-box {
+  padding: 20px 10px;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.desc {
+  padding-top: 10px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent !important;
+  gap:15px
+}
+
+.toolbar-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.bg-white{
+  background-color: white;
+}
+.text-danger{
+  color:#ba1a1a;
+}
+.bg-dark {
+  background-color: black !important;
+  color: #fff;
+}
+.full-width-button {
+  width: 100% !important;
+  background-color: black !important;
+  color: #fff;
+  padding: 30px;
+  border-radius: 0px 0px 10px 10px;
+  margin-top: 10px;
+}
